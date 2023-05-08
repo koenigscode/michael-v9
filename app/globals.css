@@ -28,3 +28,17 @@
 .primaryTextColor{
     color: rgb(var(--main));
 }
+
+.hoverable {
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    transition-property: all;
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+}
+
+.hoverable:hover {
+    top: -10px;
+    box-shadow: 0 10px 20px rgba(var(--black), 0.8);
+}
