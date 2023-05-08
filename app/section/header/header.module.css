@@ -1,0 +1,4 @@
+.headerImageBlurred {
+    filter: blur(12px);
+    opacity: 0.8;
+}

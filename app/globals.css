@@ -3,23 +3,28 @@
 @tailwind utilities;
 
 :root {
-    --black: 33, 33, 33;
+    --black: 40, 40, 40;
     --main: 248, 139, 136;
 }
 
-
 * {
     color: rgb(var(--black));
+    font-family: var(--baloo-2);
 }
 
-
-::-moz-selection { /* Code for Firefox */
+::selection {
     color: rgb(var(--black));
     background: rgb(var(--main));
+}
 
-  }
-  
-  ::selection {
-    color: rgb(var(--black));
-    background: rgb(var(--main));
-  }
+.dotted-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='10' height='10' fill='%23cccccc'/%3E%3C/svg%3E");
+}
+
+.dotted-bg-dimmed {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='10' height='10' fill='%23777777'/%3E%3C/svg%3E")
+}
+
+.primaryTextColor{
+    color: rgb(var(--main));
+}

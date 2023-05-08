@@ -1,5 +1,10 @@
-import Header from "./section/header";
+import Header from "@/section/header/header";
+import Projects from "@/section/projects/projects";
+
 
 export default function Home() {
-    return <Header />
+    return <>
+        <Header />
+        <Projects />
+    </>
 }
