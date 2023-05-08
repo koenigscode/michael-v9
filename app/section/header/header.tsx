@@ -10,7 +10,7 @@ import HeaderPicture from "@/res/images/header.jpg"
 export default function Header() {
     return (
         <header className={`${sectionStyles.section} h-screen flex justify-center items-center header`}>
-            <div className="flex flex-row w-[85%] h-full">
+            <div className="flex flex-row w-[80%] h-full">
                 <div className='flex flex-col items-center justify-center h-full w-1/2'>
                     <h1 className="text-7xl font-semibold font-dancing-script">Michael König</h1>
                     {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
@@ -21,19 +21,21 @@ export default function Header() {
                         <a href=""><IoLogoGithub className="p-3 box-content" size={40} /></a>
                     </div>
                 </div>
-                <div className="flex justify-center items-center h-full w-1/2 relative">
-                    <Image
-                        className="rounded-[2rem] w-1/2 absolute z-10"
-                        src={HeaderPicture}
-                        alt="Picture of me"
-                    />
-                    <Image
-                        className={`${styles.headerImageBlurred} rounded-[2rem] w-[55%] absolute`}
-                        src={HeaderPicture}
-                        alt="Picture of me"
-                    />
+                <div className="flex justify-center items-center h-full w-1/2">
+                    <div className="relative w-1/2 flex justify-center items-center hoverable-twist">
+                        <Image
+                            className="rounded-[2rem] w-[95%] absolute z-10"
+                            src={HeaderPicture}
+                            alt="Picture of me"
+                        />
+                        <Image
+                            className={`${styles.headerImageBlurred} rounded-[2rem] w-full absolute`}
+                            src={HeaderPicture}
+                            alt="Picture of me"
+                        />
+                    </div>
                 </div>
             </div>
-        </header>
+        </header >
     )
 }

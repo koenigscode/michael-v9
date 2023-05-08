@@ -30,7 +30,6 @@
 }
 
 .hoverable {
-    cursor: pointer;
     position: relative;
     top: 0;
     transition-property: all;
@@ -41,4 +40,14 @@
 .hoverable:hover {
     top: -10px;
     box-shadow: 0 10px 20px rgba(var(--black), 0.8);
+}
+
+.hoverable-twist {
+    position: relative;
+    transition: all 400ms ease;
+    transform: none;
+}
+
+.hoverable-twist:hover {
+    transform: scale(1.2) rotate(5deg);
 }

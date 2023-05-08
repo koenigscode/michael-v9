@@ -17,7 +17,7 @@ export interface Project {
 import bg from "@/res/images/plants.jpg"
 
 export default function Project(project: Project) {
-    return <div className="w-full dotted-bg-dimmed hoverable">
+    return <div className="w-full dotted-bg-dimmed cursor-pointer hoverable">
         <div className="relative rounded-lg"
             style={{ boxShadow: `0 0 10px rgb(${project.color}, 1), 0 0 80px rgb(${project.color}, 0.4)` }}
         >
