@@ -1,51 +1,74 @@
-export interface ProjectLink {
+import { StaticImageData } from "next/image"
+import React from "react"
+
+export interface IProjectLink {
     text: string
     href: string
 }
 
-export interface Project {
+export interface IProject {
     type: string
     date: string
     name: string
+    description: string
     color: string //rgb, format: "255, 0, 255"
+    backgroundImage: StaticImageData
+    featured?: boolean // displays the project in bigger size
+    gradientOverlayIntensity?: number
     img?: string
     text?: React.ReactNode
-    links?: ProjectLink[]
-    tags?: Array<string>
+    links?: IProjectLink[]
+    tags?: string
 }
 
-import bg from "@/res/images/plants.jpg"
+const DEFAULT_PROJECT: Partial<IProject> = {
+    gradientOverlayIntensity: 0.4,
+};
 
-export default function Project(project: Project) {
+
+export default function Project(project: IProject) {
+    project = { ...DEFAULT_PROJECT, ...project };
+
     return <div className="w-full dotted-bg-dimmed cursor-pointer hoverable">
-        <div className="relative rounded-lg"
+        <div className="relative rounded-lg h-full"
             style={{ boxShadow: `0 0 10px rgb(${project.color}, 1), 0 0 80px rgb(${project.color}, 0.4)` }}
         >
             <div className="absolute w-full h-full rounded-lg"
-                style={{ background: "linear-gradient(to bottom right,rgba(0,0,0,.4),rgba(0,0,0,.5))" }}>
+                style={{ background: `linear-gradient(to bottom right,rgba(0,0,0,${project.gradientOverlayIntensity}),rgba(0,0,0,${project.gradientOverlayIntensity! + 0.1}))` }}>
             </div>
-            <div className="absolute h-full w-full -z-10 blur-lg" style={{ background: `url(${bg.src})` }}></div>
+            <div className="absolute h-full w-full -z-10 blur-sm bg-cover bg-center" style={{ backgroundImage: `url(${project.backgroundImage.src})` }}></div>
 
-            <div className="relative">
-                <div className="px-16 py-16">
-                    <p className="text-xl italic font-semibold lowercase text-white tracking-widest mb-4">{">"} {project.type} | {project.date}</p>
-                    <p className="text-3xl font-semibold text-white mb-4"
+            <div className="relative h-full">
+                <div className={`${project.featured ? "p-16" : "p-8"} h-full flex flex-col justify-center`}>
+                    <p className={`${project.featured ? "text-xl mb-4" : "text-md mb-2"}
+                        italic font-semibold lowercase text-white tracking-widest`}>
+                        {">"} {project.type} | {project.date}</p>
+                    <p className={`${project.featured ? "text-4xl mb-4" : "text-3xl mb-2"} font-semibold text-white`}
                         style={{
                             color: `rgb(${project.color})`,
                             textShadow: `0 0 10px rgba(${project.color}, 0.6)`
                         }}>
                         {project.name}
                     </p>
-                    <p className="text-white text-lg mb-4">This project will help people take care of their plants by monitoring the temperature, light and humidity in the room where the plant is and the moisture of the soil. The project will remind people when they should water their plants or change other conditions, which will help them achieve the conditions perfect for the plant.</p>
-                    <div className="mb-2">
-                        <p className="uppercase text-white font-bold text-md">Spring Boot, Flutter, CI</p>
+                    <p className={`${project.featured ? "text-lg" : "text-md"} text-white mb-4`}>{project.description}</p>
+                    {project.tags && <div className="mb-2">
+                        <p className={`${project.featured ? "text-md" : "text-sm"} uppercase text-white font-bold`}>{project.tags}</p>
+                    </div>}
+                    <div className="flex" style={{ color: `rgb(${project.color})` }}>
+                        {
+                            project.links?.map((item, idx) => (
+                                <div key={idx}>
+                                    <a href={item.href} className="underline underline-offset-2 text-md font-bold tracking-wide" >
+                                        {item.text}
+                                    </a>
+                                    {idx < project.links!.length - 1 && <span className="text-md font-bold mr-1">,</span>}
+                                </div>
+                            ))
+
+                        }
                     </div>
-                    <a href="#"
-                        className="underline underline-offset-2 text-md font-bold tracking-wide"
-                        style={{ color: `rgb(${project.color})` }}>Video presentation</a>
                 </div>
             </div>
-
         </div>
-    </div>
+    </div >
 }

@@ -7,7 +7,7 @@
     --main: 248, 139, 136;
 }
 
-* {
+body {
     color: rgb(var(--black));
     font-family: var(--baloo-2);
 }

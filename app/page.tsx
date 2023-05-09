@@ -6,5 +6,6 @@ export default function Home() {
     return <>
         <Header />
         <Projects />
+        <div className="h-8"></div>
     </>
 }
