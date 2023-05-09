@@ -29,6 +29,10 @@ body {
     color: rgb(var(--main));
 }
 
+.mainTextColor {
+    color: rgb(var(--black));
+}
+
 .hoverable {
     position: relative;
     top: 0;
@@ -50,4 +54,12 @@ body {
 
 .hoverable-twist:hover {
     transform: scale(1.2) rotate(5deg);
+}
+
+a {
+    text-decoration: underline;
+    text-underline-offset: 0.25rem; 
+    font-size: 1rem; 
+    font-weight: bold;
+    color: rgb(var(--main))
 }

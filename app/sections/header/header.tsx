@@ -2,23 +2,23 @@ import { IoLogoInstagram } from "@react-icons/all-files/io5/IoLogoInstagram"
 import { IoLogoGithub } from "@react-icons/all-files/io5/IoLogoGithub"
 import { IoLogoLinkedin } from "@react-icons/all-files/io5/IoLogoLinkedin"
 import styles from "./header.module.css"
-import sectionStyles from "../section.module.css"
 import Image from "next/image"
 import HeaderPicture from "@/res/images/header.jpg"
+import Section from "@/components/common/section/section"
 
 
 export default function Header() {
-    return (
-        <header className={`${sectionStyles.section} h-screen flex justify-center items-center header`}>
-            <div className="flex flex-row w-[80%] h-full">
+    return <div className="h-screen">
+        <Section>
+            <div className="flex flex-row items-center h-full w-full">
                 <div className='flex flex-col items-center justify-center h-full w-1/2'>
                     <h1 className="text-7xl font-semibold font-dancing-script">Michael König</h1>
                     {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
                     <h2 className='text-4xl font-semibold mb-4 font-dancing-script'>// koenigscode</h2>
                     <div className='flex'>
-                        <a href="" ><IoLogoInstagram className='p-3 box-content' size={40} /></a>
-                        <a href=""><IoLogoLinkedin className='p-3 box-content' size={40} /></a>
-                        <a href=""><IoLogoGithub className="p-3 box-content" size={40} /></a>
+                        <a href=""><IoLogoLinkedin className='p-3 box-content text-[#0077b5]' size={40} /></a>
+                        <a href=""><IoLogoGithub className="p-3 box-content mainTextColor" size={40} /></a>
+                        <a href=""><IoLogoInstagram className='p-3 box-content text-[#e4405f]' size={40} /></a>
                     </div>
                 </div>
                 <div className="flex justify-center items-center h-full w-1/2">
@@ -36,6 +36,7 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-        </header >
-    )
+        </Section>
+    </div>
+
 }
