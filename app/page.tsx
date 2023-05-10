@@ -1,13 +1,19 @@
 import Header from "@/sections/header/header";
 import Projects from "@/sections/projects/projects";
 import About from "./sections/about/about";
+import Technologies from "./sections/technologies/technologies";
+import Footer from "./sections/footer/footer";
 
 
 export default function Home() {
     return <>
         <Header />
         <About />
+        <div className="h-16"></div>
         <Projects />
-        <div className="h-8"></div>
+        <div className="h-16"></div>
+        <Technologies />
+        <div className="h-16"></div>
+        <Footer />
     </>
 }

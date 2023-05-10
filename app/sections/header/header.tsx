@@ -16,9 +16,9 @@ export default function Header() {
                     {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
                     <h2 className='text-4xl font-semibold mb-4 font-dancing-script'>// koenigscode</h2>
                     <div className='flex'>
-                        <a href=""><IoLogoLinkedin className='p-3 box-content text-[#0077b5]' size={40} /></a>
-                        <a href=""><IoLogoGithub className="p-3 box-content mainTextColor" size={40} /></a>
-                        <a href=""><IoLogoInstagram className='p-3 box-content text-[#e4405f]' size={40} /></a>
+                        <a target="_blank" href=""><IoLogoLinkedin className='p-3 box-content text-[#0077b5]' size={40} /></a>
+                        <a target="_blank" href=""><IoLogoGithub className="p-3 box-content mainTextColor" size={40} /></a>
+                        <a target="_blank" href=""><IoLogoInstagram className='p-3 box-content text-[#e4405f]' size={40} /></a>
                     </div>
                 </div>
                 <div className="flex justify-center items-center h-full w-1/2">

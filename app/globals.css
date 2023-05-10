@@ -4,12 +4,14 @@
 
 :root {
     --black: 40, 40, 40;
-    --main: 248, 139, 136;
+    --main: 0, 170, 255;
+    --main-altered: 0, 200, 255;
 }
 
 body {
     color: rgb(var(--black));
     font-family: var(--baloo-2);
+    text-align: justify;
 }
 
 ::selection {

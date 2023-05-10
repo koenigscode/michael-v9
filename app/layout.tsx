@@ -1,6 +1,7 @@
 import "./globals.css"
 import "./css-reset.css"
 import { Inter, Dancing_Script, Baloo_2 } from "next/font/google"
+import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 const dancingScript = Dancing_Script({ subsets: ["latin"], variable: "--dancing-script" })
