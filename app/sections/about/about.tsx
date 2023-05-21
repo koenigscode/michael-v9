@@ -2,7 +2,7 @@ import Section from "@/components/common/section/section"
 
 export default function About() {
     return <Section title="About me">
-        <p className="text-xl">
+        <p className="text-lg md:text-xl leading-6 md:leading-normal text-left md:text-justify">
             I'm Michael, a software engineering student (BSc) at the
             {" "}<a target="_blank" href="https://www.gu.se/en/study-gothenburg/software-engineering-and-management-bachelors-programme-n1sof">University of Gothenburg</a>{" "}
             with a strong passion for informatics.

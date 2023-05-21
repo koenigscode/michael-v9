@@ -35,13 +35,13 @@ const technologies = [
 ]
 export default function Technologies() {
     return <Section title="Technologies I'm using">
-        <div className="grid grid-cols-2 gap-4 gap-y-20">
+        <div className="grid md:grid-cols-2 gap-4 gap-y-8 md:gap-y-20">
             {technologies.map((technology: ITechnology, idx: number) =>
                 <React.Fragment key={idx}>
                     <div className="flex justify-center items-center">
                         <Image src={technology.image} alt={technology.altText} className="max-w-[50%]" />
                     </div>
-                    <div className="flex justify-center items-center w-full text-lg">
+                    <div className="flex justify-center items-center w-full text-lg mb-12 md:mb-0 leading-6">
                         <p>{technology.content}</p>
                     </div>
                 </React.Fragment>

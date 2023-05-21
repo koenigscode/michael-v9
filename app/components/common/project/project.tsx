@@ -26,8 +26,9 @@ export default function Project(project: IProject) {
     const backgroundImageStyle = { backgroundImage: `url(${project.backgroundImage.src})` }
 
     return <>
-        <div className="w-full dotted-bg-dimmed cursor-pointer rounded-lg hoverable"
-            onClick={() => { setModalIsOpen(true) }}>
+        <div className="w-full dotted-bg-dimmed rounded-lg"
+        // onClick={() => { setModalIsOpen(true) }}
+        >
             <div className="relative h-full"
                 style={project.featured ? {
                     boxShadow: `0 0 10px rgb(${project.color}, 1), 0 0 30px rgb(${project.color}, 0.4), 0 0 80px rgb(${project.color}, 0.4)`
@@ -39,30 +40,32 @@ export default function Project(project: IProject) {
                 <div className="absolute h-full w-full -z-10 blur-sm bg-cover bg-center" style={backgroundImageStyle}></div>
 
                 <div className="relative h-full">
-                    <div className={`${project.featured ? "p-16" : "p-8"} h-full flex flex-col justify-center`}>
-                        <p className={`${project.featured ? "text-xl mb-4" : "text-md mb-2"}
-                        italic font-semibold lowercase text-white tracking-widest`}>
+                    <div className={`${project.featured ? "md:p-16" : "md:p-8"} p-8 h-full flex flex-col justify-center`}>
+                        <p className={`${project.featured ? "md:text-xl md:mb-4" : "md:text-base"}
+                        mb-2 text-xs italic font-semibold lowercase text-white tracking-widest text-left`}>
                             {">"} {project.type} | {project.date}</p>
-                        <p className={`${project.featured ? "text-4xl mb-4" : "text-3xl mb-2"} font-semibold text-white`}
+                        <p className={`${project.featured ? "md:text-4xl md:mb-4" : "md:text-3xl"} mb-2 text-xl font-semibold text-white`}
                             style={{
                                 color: `rgb(${project.color})`,
                                 textShadow: `0 0 10px rgba(${project.color}, 0.6)`
                             }}>
                             {project.name}
                         </p>
-                        <p className={`${project.featured ? "text-lg" : "text-md"} text-white mb-4`}>{project.description}</p>
+                        <p className={`${project.featured ? "md:text-lg" : "md:text-base"} text-white mb-4 text-sm leading-6 md:leading-normal text-left md:text-justify`}>{project.description}</p>
                         {project.tags && <div className="mb-2">
-                            <p className={`${project.featured ? "text-md" : "text-sm"} uppercase text-white font-bold`}>{project.tags}</p>
+                            <p className={`text-xs uppercase text-white font-bold text-left ${project.featured ? "md:text-base" : "md:text-sm"}`}>{project.tags}</p>
                         </div>}
                         <div className="flex">
                             {project.links?.map((item, idx) => (
                                 <div key={idx}>
                                     <a href={item.href}
-                                        style={{ color: `rgb(${project.color})` }}>
+                                        target="_blank"
+                                        style={{ color: `rgb(${project.color})` }}
+                                        className="text-sm md:text-base font-bold">
                                         {item.text}
                                     </a>
                                     {idx < project.links!.length - 1 &&
-                                        <span className="text-md font-bold mr-1"
+                                        <span className="text-sm md:text-base font-bold mr-1"
                                             style={{ color: `rgb(${project.color})` }}>,</span>}
                                 </div>
                             ))}
@@ -72,7 +75,7 @@ export default function Project(project: IProject) {
             </div>
         </div>
         {/* TODO: Remove content.position: absolute on mobile */}
-        <Modal isOpen={modalIsOpen} style={{ content: { position: "static", margin: 0, padding: 0, zIndex: 10, border: "none", height: "fit-content", width: "85%", }, overlay: { overflowY: "auto", display: "flex", justifyContent: "center", alignItems: "center" } }}
+        {/* <Modal isOpen={modalIsOpen} style={{ content: { position: "static", margin: 0, padding: 0, zIndex: 10, border: "none", height: "fit-content", width: "85%", }, overlay: { overflowY: "auto", display: "flex", justifyContent: "center", alignItems: "center" } }}
             onRequestClose={() => { setModalIsOpen(false) }}>
             <div className="w-full dotted-bg-dimmed relative">
                 <IoCloseCircle
@@ -85,7 +88,6 @@ export default function Project(project: IProject) {
                     </div>
                     <div className="absolute h-full w-full -z-40 blur-sm bg-cover bg-center" style={backgroundImageStyle}></div>
 
-                    {/* Content */}
                     <div className="relative h-full text-white p-12">
                         <p className="text-xl mb-2 italic font-semibold lowercase text-white tracking-widest">
                             {">"} {project.type} | {project.date}</p>
@@ -101,5 +103,6 @@ export default function Project(project: IProject) {
                     </div>
                 </div>
             </div>
-        </Modal></>
+        </Modal> */}
+    </>
 }

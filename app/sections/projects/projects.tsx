@@ -14,7 +14,7 @@ const projects: IProject[] = [
         name: "Plant Stein",
         type: "university project",
         date: "2023",
-        description: "This prototype will help people take care of their plants by monitoring the temperature, light and humidity in the room where the plant is and the moisture of the soil. The project will remind people when they should water their plants or change other conditions, which will help them achieve the conditions perfect for the plant.",
+        description: "We developed Plant Stein as a part of our university project, in an agile team of 6 people. It's a plant surveillance system that monitors temperature, humidity, brightness and soil moisture of your plants and notifies you when the plant isn't happy. Happy plant - happy you!",
         detailedDescription: <>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptate corrupti delectus qui ut pariatur, voluptatibus aliquid sequi laudantium iure blanditiis! Adipisci debitis deleniti voluptatem obcaecati quam similique voluptas sapiente!.
             <br />
             <br />
@@ -27,8 +27,8 @@ const projects: IProject[] = [
         color: "27, 234, 165",
         backgroundImage: plantBackground,
         featured: true,
-        tags: "Spring Boot, JPA/Hibernate, Flutter, GitLab CI",
-        links: [{ href: "#", text: "Video presentation" }, { href: "#", text: "GitHub" },]
+        tags: "Spring Boot, Flutter, Microcontroller, GitLab CI",
+        links: [{ text: "Video presentation", href: "https://youtu.be/81Tw_L5ifvU" },]
     },
     {
         name: "Novellin",
@@ -51,7 +51,8 @@ const projects: IProject[] = [
         color: "255, 109, 104",
         backgroundImage: codeBackground,
         darkOverlayIntensity: DEFAULT_PROJECT.darkOverlayIntensity! - 0.1,
-        tags: "Next.js, Tailwind CSS"
+        tags: "Next.js, Tailwind CSS",
+        links: [{ text: "Source Code", href: "https://github.com/koenigscode/michael-v9" }],
     },
     {
         name: "ECER 2020",
@@ -61,7 +62,8 @@ const projects: IProject[] = [
         detailedDescription: "TODO:",
         color: "106, 149, 255",
         backgroundImage: ecerBackground,
-        tags: "Python, ROS, OpenCV"
+        tags: "Python, ROS, OpenCV",
+        links: [{ text: "PRIA ECER", href: "https://pria.at/en/ecer/" }],
     },
     {
         name: "collectIT - School Open Days",
@@ -78,9 +80,9 @@ const projects: IProject[] = [
 
 export default function Projects() {
     return <Section title="My projects">
-        <div className="grid grid-cols-2 gap-4 auto-rows-auto">
+        <div className="grid lg:grid-cols-2 gap-4 auto-rows-auto">
             {
-                projects.filter(project => project.featured).map((project, idx) => <div key={idx} className="col-span-2 mb-4">
+                projects.filter(project => project.featured).map((project, idx) => <div key={idx} className="lg:col-span-2 lg:mb-4">
                     <Project {...project}></Project>
                 </div>
                 )
