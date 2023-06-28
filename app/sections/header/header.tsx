@@ -3,7 +3,7 @@ import { IoLogoGithub } from "@react-icons/all-files/io5/IoLogoGithub"
 import { IoLogoLinkedin } from "@react-icons/all-files/io5/IoLogoLinkedin"
 import styles from "./header.module.css"
 import Image from "next/image"
-import HeaderPicture from "@/res/images/header.jpg"
+import HeaderPicture from "@/res/images/header.png"
 import Section from "@/components/common/section/section"
 
 
@@ -21,7 +21,7 @@ export default function Header() {
                         <a target="_blank" href="https://www.instagram.com/koenigscode/"><IoLogoInstagram className='p-3 box-content text-[#e4405f]' size={40} /></a>
                     </div>
                 </div>
-                <div className="flex justify-center items-center h-full w-full md:w-7/12">
+                <div className="flex justify-center items-center h-full w-full md:w-7/12 mb-8">
                     <div className="relative w-7/12 max-w-[12rem] md:max-w-none md:w-1/2 flex justify-start md:justify-center items-start md:items-center hoverable-twist">
                         <Image
                             className="rounded-[2rem] w-[95%] absolute z-10"

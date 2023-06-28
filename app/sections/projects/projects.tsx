@@ -31,6 +31,18 @@ const projects: IProject[] = [
         links: [{ text: "Video presentation", href: "https://youtu.be/81Tw_L5ifvU" },]
     },
     {
+        name: "Portfolio Website",
+        type: "web dev",
+        date: "2023",
+        description: "My personal website built with Next.js. Yes, you're on it right now!",
+        detailedDescription: "TODO:",
+        color: "255, 109, 104",
+        backgroundImage: codeBackground,
+        darkOverlayIntensity: DEFAULT_PROJECT.darkOverlayIntensity! - 0.1,
+        tags: "Next.js, Tailwind CSS",
+        links: [{ text: "Source Code", href: "https://github.com/koenigscode/michael-v9" }],
+    },
+    {
         name: "Novellin",
         type: "school diploma thesis",
         date: "2022",
@@ -41,18 +53,6 @@ const projects: IProject[] = [
         darkOverlayIntensity: DEFAULT_PROJECT.darkOverlayIntensity! + 0.2,
         // featured: true,
         tags: "React Native, Redux"
-    },
-    {
-        name: "Portfolio Website",
-        type: "web dev",
-        date: "2023",
-        description: "My personal website built with Next.js. You're on it right now, who could've guessed?",
-        detailedDescription: "TODO:",
-        color: "255, 109, 104",
-        backgroundImage: codeBackground,
-        darkOverlayIntensity: DEFAULT_PROJECT.darkOverlayIntensity! - 0.1,
-        tags: "Next.js, Tailwind CSS",
-        links: [{ text: "Source Code", href: "https://github.com/koenigscode/michael-v9" }],
     },
     {
         name: "ECER 2020",
