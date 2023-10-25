@@ -3,7 +3,7 @@ import { IoLogoGithub } from "@react-icons/all-files/io5/IoLogoGithub"
 import { IoLogoLinkedin } from "@react-icons/all-files/io5/IoLogoLinkedin"
 import styles from "./header.module.css"
 import Image from "next/image"
-import HeaderPicture from "@/res/images/header.png"
+import HeaderPicture from "@/res/images/header.jpg"
 import Section from "@/components/common/section/section"
 
 
