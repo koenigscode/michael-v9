@@ -4,6 +4,7 @@ import plantBackground from "@/res/images/plants.jpg"
 import novellinBackground from "@/res/images/novellin.png"
 import collectItBackground from "@/res/images/collectit.jpg"
 import codeBackground from "@/res/images/code.jpg"
+import wasubbyBackground from "@/res/images/wasubby.png"
 import ecerBackground from "@/res/images/ecer.png"
 import React from "react";
 import Section from "@/components/common/section/section";
@@ -29,6 +30,17 @@ const projects: IProject[] = [
         featured: true,
         tags: "Spring Boot, Flutter, Microcontroller, GitLab CI",
         links: [{ text: "Video presentation", href: "https://youtu.be/81Tw_L5ifvU" },]
+    },
+    {
+        name: "WaSubby",
+        type: "university project",
+        date: "2023",
+        description: "WaSubby is a web app that allows the user to transcribe video or audio files in their original language and translates the generated subtitles into English as well. The media can then be watched/listened to with the subtitles in both languages, aiding the user in learning a new language.",
+        detailedDescription: "TODO:",
+        color: "184, 239, 136",
+        backgroundImage: wasubbyBackground,
+        darkOverlayIntensity: DEFAULT_PROJECT.darkOverlayIntensity! + 0.2,
+        tags: "OpenAI whisper, Vue.js, Express, REST",
     },
     {
         name: "Portfolio Website",
