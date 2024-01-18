@@ -79,15 +79,6 @@ const projects: IProject[] = [
           for the REST API and the database (using JPA). MQTT is used for
           receiving data from the microcontroller.
           <Image src={plantSteinDiagram} alt="Plant Stein component diagram" />
-          <iframe
-            className="max-w-full"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/81Tw_L5ifvU?si=yJEA2UrZ3rAvGB-H"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
         </div>
       </>
     ),
