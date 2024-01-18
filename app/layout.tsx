@@ -1,7 +1,6 @@
 import "./globals.css"
 import "./css-reset.css"
 import { Baloo_2, Akaya_Kanadaka } from "next/font/google"
-import Script from "next/script"
 
 const baloo2 = Baloo_2({ subsets: ["latin"], variable: "--baloo-2" })
 const akaya = Akaya_Kanadaka({

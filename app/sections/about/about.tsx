@@ -11,7 +11,7 @@ export default function About() {
         >
           University of Gothenburg, Sweden
         </a>{" "}
-        with a strong passion for Informatics.
+        (2022-2025) with a strong passion for Informatics.
         <br />I also hold a degree in Informatics from the{" "}
         <a
           target="_blank"
@@ -19,11 +19,15 @@ export default function About() {
         >
           HTL St. Pölten, Austria
         </a>{" "}
-        , with a strong focus on software engineering, database design, and
-        network technologies.
+        (2016-2021) , with a strong focus on software engineering, database
+        design, and network technologies.
         <br /> <br />
-        In my free time, I enjoy working on personal coding projects to enhance
-        my skills.
+        In my spare time, I enjoy working on personal coding projects to refine
+        my skills. My coding journey began in 2016, and by 2017, I discovered an
+        interest in web development, a passion I followed several years. Over
+        the years, I have explored various other fields of software development,
+        leading me to shift my main interest from frontend to backend
+        development.
       </p>
     </Section>
   )
