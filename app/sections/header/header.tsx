@@ -37,6 +37,9 @@ export default function Header() {
                   size={40}
                 />
               </a>
+              <a target="_blank" href="https://flowcv.com/resume/dngk1sg4fg">
+                <div className="p-3 box-content mainTextColor text-4xl">CV</div>
+              </a>
             </div>
           </div>
           <div className="flex justify-center items-center h-full w-full md:w-7/12 mb-8">
