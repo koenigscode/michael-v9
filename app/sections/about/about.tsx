@@ -28,6 +28,10 @@ export default function About() {
         the years, I have explored various other fields of software development,
         leading me to shift my main interest from frontend to backend
         development.
+        <br /> <br />
+        Apart from Software Engineering, I enjoy language learning (currently
+        Swedish ~B2 and Russian ~A2), brewing beer/kombucha/mead/etc and making
+        espresso.
       </p>
     </Section>
   )
