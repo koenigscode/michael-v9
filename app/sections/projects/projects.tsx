@@ -26,7 +26,7 @@ const projects: IProject[] = [
     type: "Bachelor's Thesis",
     date: "2025 (ongoing)",
     description:
-      "Exploring how Feature Stores can utilize built-in Data Cleaning to serve features in their optimial representation for each consuming model type.",
+      "Exploring how Feature Stores can utilize built-in Data Cleaning to serve features in their optimal representation for each consuming model type, by building a Python library.",
     detailedDescription: (
       <>
         <div className="flex flex-col items-center gap-16">
@@ -104,7 +104,7 @@ const projects: IProject[] = [
   {
     name: "ASL Project",
     type: "university project",
-    date: "2024",
+    date: "2024-25",
     description:
       "An educational tool that can be used to increase ASL literacy. The user is presented with how the words are signed, and has to sign the prompted word to practice their newly acquired knowledge.",
     detailedDescription: (

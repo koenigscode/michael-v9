@@ -24,13 +24,13 @@ export default function About() {
         <br /> <br />
         In my spare time, I enjoy working on personal coding projects to refine
         my skills. My coding journey began in 2016, and by 2017, I discovered an
-        interest in web development, a passion I followed several years. Over
-        the years, I have explored various other fields of software development,
-        leading me to shift my main interest from frontend to backend
-        development.
+        interest in web development, a passion I followed for several years.
+        Over the years, I have explored various other fields of software
+        development, leading me to shift my main interest from frontend to
+        backend development.
         <br /> <br />
         Apart from Software Engineering, I enjoy language learning (currently
-        Swedish ~B2 and Russian ~A2), brewing beer/kombucha/mead/etc and making
+        Swedish ~B2 and Russian ~A2), brewing beer/kombucha/mead/etc, and making
         espresso.
       </p>
     </Section>
