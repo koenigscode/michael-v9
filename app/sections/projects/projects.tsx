@@ -99,7 +99,12 @@ const projects: IProject[] = [
     colorOverlayIntensity: DEFAULT_PROJECT.colorOverlayIntensity! + 0.4,
     darkOverlayIntensity: DEFAULT_PROJECT.darkOverlayIntensity! - 0.15,
     tags: "Machine Learning, sk-learn, C++, Python",
-    links: [],
+    links: [
+      {
+        text: "GitHub Repo",
+        href: "https://github.com/koenigscode/cyber-physical-systems",
+      },
+    ],
   },
   {
     name: "ASL Project",
@@ -143,7 +148,12 @@ const projects: IProject[] = [
     // darkOverlayIntensity: DEFAULT_PROJECT.darkOverlayIntensity! - 0.1,
     featured: true,
     tags: "Machine Learning, Tensorflow, Keras, Django",
-    links: [],
+    links: [
+      {
+        text: "GitHub Repo",
+        href: "https://github.com/koenigscode/asl-project",
+      },
+    ],
   },
   {
     name: "Entoothiast",
@@ -184,7 +194,12 @@ const projects: IProject[] = [
     color: "194, 175, 217",
     backgroundImage: teethBackground,
     tags: "Distributed Systems, Express.js, MQTT, Vue.js, GitLab CI, Load testing",
-    links: [],
+    links: [
+      {
+        text: "GitHub Repo",
+        href: "https://github.com/koenigscode/entoothiast",
+      },
+    ],
   },
   {
     name: "Plant Stein",
@@ -213,6 +228,10 @@ const projects: IProject[] = [
     backgroundImage: plantBackground,
     tags: "Spring Boot, Flutter, Microcontroller, GitLab CI",
     links: [
+      {
+        text: "GitHub Repo",
+        href: "https://github.com/koenigscode/plant-stein",
+      },
       { text: "Video presentation", href: "https://youtu.be/81Tw_L5ifvU" },
     ],
   },
@@ -240,6 +259,9 @@ const projects: IProject[] = [
     colorOverlayIntensity: DEFAULT_PROJECT.colorOverlayIntensity! + 0.4,
     // darkOverlayIntensity: DEFAULT_PROJECT.darkOverlayIntensity! + 0.1,
     tags: "OpenAI whisper, Vue.js, Express, REST",
+    links: [
+      { text: "GitHub Repo", href: "https://github.com/koenigscode/WaSubby" },
+    ],
   },
   {
     name: "Portfolio Website",
@@ -256,7 +278,7 @@ const projects: IProject[] = [
     tags: "Next.js, Tailwind CSS",
     links: [
       {
-        text: "Source Code",
+        text: "GitHub Repo",
         href: "https://github.com/koenigscode/michael-v9",
       },
     ],
