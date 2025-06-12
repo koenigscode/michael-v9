@@ -22,7 +22,8 @@ const technologies = [
       <>
         I started using Python around 2018, immediately liked it and decided to
         give a 4h crash course on it at my High School, back in 2019. Since then
-        I have mostly been using it for ML, including sk-learn and TensorFlow.
+        I have mostly been using it for general-purpose programming and ML,
+        including scikit-learn.
       </>
     ),
   },
@@ -31,19 +32,9 @@ const technologies = [
     altText: "Spring Logo",
     content: (
       <>
-        I've been using Spring (Boot) since I learnt it in school, and I've
+        I've been using Spring Boot (Java) since I learnt it in school, and I've
         learnt to love it over the years - the ecosystem is huge, and it's easy
         to get started with.
-      </>
-    ),
-  },
-  {
-    image: FlutterLogo,
-    altText: "Flutter Logo",
-    content: (
-      <>
-        Flutter is my framework of choice for building mobile/cross-platform
-        apps.
       </>
     ),
   },
@@ -56,8 +47,8 @@ const technologies = [
         everything, especially in larger teams and when working with new
         technologies – it can be a time saver when it comes to locally setting
         up projects on everyone's machine. I'm also running over 15 Docker
-        containers for various services on my "home server" (euphemism for old
-        laptop), since I believe it makes (re-)deployment easier.
+        containers for various services on my "home server" (euphemism for "my
+        old laptop"), since I believe it makes (re-)deployment easier.
       </>
     ),
   },

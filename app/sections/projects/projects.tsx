@@ -22,31 +22,31 @@ import Image from "next/image"
 
 const projects: IProject[] = [
   {
-    name: "Feature Store Library with Built-in Data Cleaning Support",
+    name: "Feature Store Library with Built-in Data Cleaning",
     type: "Bachelor's Thesis",
-    date: "2025 (ongoing)",
+    date: "2025",
     description:
       "Exploring how Feature Stores can utilize built-in Data Cleaning to serve features in their optimal representation for each consuming model type, by building a Python library.",
     detailedDescription: (
       <>
         <div className="flex flex-col items-center gap-16">
-          Feature Engineering plays a critical role in the success of a Machine
-          Learning project, leading to the rise of Feature Stores, which allow
-          features to be shared on an enterprise-level, across several Machine
-          Learning pipelines.
-          <br />
-          <br />
-          Current solutions have different drawbacks, and this paper will focus
-          on adding feature optimization to Feature Stores by integrating Data
-          Cleaning into Feature Stores.
+          Feature engineering plays a critical role in the success of a machine
+          learning project, leading to the rise of feature stores, which allow
+          features to be shared on an enterprise level across several machine
+          learning pipelines.
           <br></br>
           <br></br>
-          This will be implemented as a Feature Store library as part of Design
-          Science Research, and will explore how to serve features in their
-          optimal pre-processed representation for different Machine Learning
-          models. The paper investigates the effect of the developed library on
-          developer efficiency, extensibility and completeness of the proposed
-          solution.
+          Current solutions need to be complemented by other libraries to carry
+          out data preprocessing, whereas our paper focused on integrating data
+          cleaning into feature stores to explore its impact on code reuse and
+          quick prototyping. This was implemented as a feature store library as
+          part of design science research, and explored how to serve features in
+          their optimal preprocessed representation for different machine
+          learning models.
+          <br></br>
+          <br></br>
+          We also investigated the effect of the developed library on code
+          complexity, extensibility, and completeness of the proposed solution.
         </div>
       </>
     ),
