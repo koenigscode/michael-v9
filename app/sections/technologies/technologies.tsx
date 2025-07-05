@@ -19,12 +19,9 @@ const technologies = [
     image: PythonLogo,
     altText: "Python Logo",
     content: (
-      <>
-        I started using Python around 2018, immediately liked it and decided to
-        give a 4h crash course on it at my High School, back in 2019. Since then
-        I have mostly been using it for general-purpose programming and ML,
-        including scikit-learn.
-      </>
+    <>
+      I began working with Python in 2018 and was quickly drawn to its simplicity and versatility. In 2019, I shared my enthusiasm by teaching a 4-hour crash course at my high school. Since then, I've used Python extensively for general-purpose programming and machine learning projects, including work with scikit-learn.
+    </>
     ),
   },
   {
