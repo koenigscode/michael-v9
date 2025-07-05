@@ -2,7 +2,6 @@ import Header from "@/sections/header/header";
 import Projects from "@/sections/projects/projects";
 import About from "./sections/about/about";
 import Technologies from "./sections/technologies/technologies";
-import Footer from "./sections/footer/footer";
 
 
 export default function Home() {
@@ -14,6 +13,5 @@ export default function Home() {
         <div className="h-16"></div>
         <Technologies />
         <div className="h-16"></div>
-        <Footer />
     </>
 }
