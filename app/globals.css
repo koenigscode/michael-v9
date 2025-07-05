@@ -39,28 +39,28 @@
  
   .dark {
     --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --foreground: 0 0% 86%;
  
     --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card-foreground: 0 0% 86%;
  
     --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover-foreground: 0 0% 86%;
  
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
  
     --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary-foreground: 0 0% 86%;
  
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
  
     --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent-foreground: 0 0% 86%;
  
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 86%;
  
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
@@ -84,10 +84,16 @@
     --main: 68, 221, 170;
 }
 
+.dark {
+    --black: 220, 220, 220;
+    --main: 68, 221, 170;
+}
+
 body {
     color: rgb(var(--black));
     font-family: var(--baloo-2);
     text-align: justify;
+    caret-color: rgb(var(--main));
 }
 
 ::selection {
@@ -97,6 +103,10 @@ body {
 
 .dotted-bg {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='10' height='10' fill='%23cccccc'/%3E%3C/svg%3E");
+}
+
+.dark .dotted-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='10' height='10' fill='%23333333'/%3E%3C/svg%3E");
 }
 
 .dotted-bg-dimmed {
@@ -121,7 +131,11 @@ body {
 
 .hoverable:hover {
     top: -10px;
-    box-shadow: 0 10px 20px rgba(var(--black), 0.8);
+    box-shadow: 0 10px 20px rgba(var(--black), 0.3);
+}
+
+.dark .hoverable:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .hoverable-twist {

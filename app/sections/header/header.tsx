@@ -5,16 +5,20 @@ import styles from "./header.module.css"
 import Image from "next/image"
 import HeaderPicture from "@/res/images/header.png"
 import Section from "@/components/common/section/section"
+import { ThemeToggle } from "@/components/ui/theme-toggle"
 
 export default function Header() {
   return (
-    <div className="h-screen">
+    <div className="h-screen relative">
+      <div className="absolute top-4 right-4 z-20">
+        <ThemeToggle />
+      </div>
       <Section>
         <div className="flex flex-col-reverse md:flex-row items-center h-full w-full">
           <div className="flex flex-col items-center justify-start md:justify-center h-full md:w-1/2">
             <h1 className="text-5xl lg:text-7xl font-heading">Michael König</h1>
             {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
-            <h2 className="text-4xl mb-4 font-heading">// koenigscode</h2>
+            <h2 className="text-3xl mt-6 mb-4 font-heading">// koenigscode</h2>
             <div className="flex">
               <a
                 target="_blank"

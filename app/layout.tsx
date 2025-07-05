@@ -1,6 +1,7 @@
 import "./globals.css"
 import "./css-reset.css"
 import { Baloo_2, Akaya_Kanadaka } from "next/font/google"
+import { ThemeProvider } from "./lib/theme-provider"
 
 const baloo2 = Baloo_2({ subsets: ["latin"], variable: "--baloo-2" })
 const akaya = Akaya_Kanadaka({
@@ -20,9 +21,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${akaya.variable} ${baloo2.variable} dotted-bg`}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${akaya.variable} ${baloo2.variable} dotted-bg bg-background text-foreground transition-colors`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
